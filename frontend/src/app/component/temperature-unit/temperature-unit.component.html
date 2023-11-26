@@ -1,0 +1,15 @@
+
+<div class="container">
+  <h5>change  Temperature Unit</h5>
+  <div class="p-2">
+  <span style="font-size: 20px;" class="p-2">F</span>
+    <ng-toggle
+    (change)="OnChange()"
+  [(value)]="unitValue"
+  [color]="{
+    unchecked: '#939da2',
+    checked: '#f62d51'
+  }"
+></ng-toggle> <span style="font-size: 20px;" class="p-2">C</span>
+</div>
+</div>

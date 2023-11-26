@@ -1,0 +1,41 @@
+<h2 class="text-center"> city : {{city?.city}} ,id: {{city?.id}}</h2>
+
+<div class="row p-2">
+  <div class="col-md-4">
+    <app-search-dy-date (selectedDate)="FilterByDate($event)"></app-search-dy-date>
+  </div>
+  <!-- <div class="col-md-4">
+    <app-searsh-by-id (searchCityId)="SearshById($event)"></app-searsh-by-id>
+  </div> -->
+  <div class="col-md-4">
+    <app-temperature-unit (temperatureUnit)="EventUnitEmited($event)">
+
+    </app-temperature-unit>
+  </div>
+</div>
+<table class="table table-hover p-3">
+  <thead>
+    <tr>
+      <th>date</th>
+      <th>humidity</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let item of cityObject?.forecast ">
+      <td> {{item.date}}</td>
+      <td> {{item.humidity}}</td>
+
+      <td *ngIf="temperatureUnit == 'C'">
+        {{ item.temperatureCelsius }} °C
+
+      </td>
+      <td *ngIf="temperatureUnit != 'C'">
+        {{item.temperatureFahrenheit }} °F
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>

@@ -1,0 +1,10 @@
+<div class="row container p-2">
+    <h5> Search by Date</h5>
+    <div class="input-group">
+        <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model" ngbDatepicker
+            #d="ngbDatepicker" (dateSelect)="onDateSelect($event)" />
+        <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+
+    </div>
+
+</div>
