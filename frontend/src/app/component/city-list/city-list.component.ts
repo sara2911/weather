@@ -21,7 +21,7 @@ export class CityListComponent implements OnInit {
   getAllCityWithForcast() {
     this.service.GetForecast().subscribe((result) => {
       this.AllCities = result as City[];
-      this.CityList = this.AllCities.map((city) => ({ ...city })); // Deep copy of City objects
+      this.CityList = this.AllCities.map((city) => ({ ...city })); 
       this.FilterByDate(this.today)
     })
   }

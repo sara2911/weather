@@ -4,7 +4,6 @@ import { CityListComponent } from './component/city-list/city-list.component';
 import { CityComponent } from './component/city/city.component';
 
 const routes: Routes = [
-//   { path: 'heroes', component: HeroesComponent }
 {path:'',component:CityListComponent},
 {path:'city/:id',component:CityComponent}
 ];

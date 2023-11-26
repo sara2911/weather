@@ -1,11 +1,4 @@
-// interface WeatherForecast {
-//     id: number;
-//     city: string;
-//     forecast: Forecast[];
 
-// }
-
-// 
 export class  City{
     id: number=0
     city: string='';
